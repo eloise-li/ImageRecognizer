@@ -1,11 +1,15 @@
-package com.example.imagerecognizer
+package com.eloise.imagerecognizer
 
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
+import android.view.Window
+import android.view.WindowManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import org.opencv.android.OpenCVLoader
@@ -32,6 +36,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            var w = window;
+//            w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
         setContentView(R.layout.activity_main)
 
         imageView = findViewById(R.id.imageView)
@@ -70,24 +78,83 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun classify(bitmap: Bitmap) {
-        val inputBlob = preprocess(bitmap)
-        net.setInput(inputBlob)
-        val output = net.forward()
+        try {
+            val inputBlob = preprocess(bitmap)
+            net.setInput(inputBlob)
+            val output = net.forward(net.unconnectedOutLayersNames[0])
 
-        val maxIdx = Core.minMaxLoc(output).maxLoc.x.toInt()
-        val label = labels.getOrNull(maxIdx) ?: "Unknown"
-        val confidence = output[0, maxIdx][0] * 100.0
+//            for (i in 0 until inputBlob.dims()) {
+//                println("dim[$i] = ${inputBlob.size(i)}")
+//            }
 
-        resultText.text = "识别结果：$label\n置信度：%.2f%%".format(confidence)
+//            val output = net.forward("prob")
+//            val outputNames = net.unconnectedOutLayersNames
+//            println("Output layers: $outputNames")
+//            val output = net.forward(outputNames[0])
+
+
+            if (output.empty() || output.total() == 0L) {
+                resultText.text = "model reasoning fails, output is empty!"
+                return
+            }
+
+//            val probs = FloatArray(output.size(1).toInt())
+//            output.get(0, 0, probs)
+//
+//            var maxIdx = 0
+//            var maxVal = probs[0]
+//            for (i in 1 until probs.size) {
+//                if (probs[i] > maxVal) {
+//                    maxVal = probs[i]
+//                    maxIdx = i
+//                }
+//            }
+
+            val reshaped = output.reshape(1, output.size(1))
+            if (reshaped.empty() || reshaped.rows() == 0) {
+                resultText.text = "no valid result output!"
+                return
+            }
+
+            for (i in 0 until output.dims()) {
+                println("dim[$i] = ${output.size(i)}")
+            }
+
+            val result = Core.minMaxLoc(reshaped)
+            val maxConfidence = result.maxVal
+            val maxIndex = result.maxLoc.y.toInt()
+
+            val label = labels.getOrNull(maxIndex) ?: "Unknown"
+            val confidencePercent = maxConfidence * 100.0
+
+            resultText.text = "result：$label\nconfidence：%.2f%%".format(confidencePercent)
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            resultText.text = "exception：${e.message}"
+        }
     }
+
+
 
     private fun preprocess(bitmap: Bitmap): Mat {
         val resized = Bitmap.createScaledBitmap(bitmap, 224, 224, false)
         val mat = Mat()
         Utils.bitmapToMat(resized, mat)
-        Imgproc.cvtColor(mat, mat, Imgproc.COLOR_RGBA2BGR)
-        return Dnn.blobFromImage(mat, 1.0, Size(224.0, 224.0), Scalar(104.0, 117.0, 123.0), false, false)
+        Imgproc.cvtColor(mat, mat, Imgproc.COLOR_RGBA2RGB)
+
+        return Dnn.blobFromImage(
+            mat,
+            1.0 / 255.0,
+            Size(224.0, 224.0),
+            Scalar(0.0, 0.0, 0.0),
+            true,
+            false
+        )
     }
+
+
+
 
     private fun assetFilePath(assetName: String): String {
         val file = File(filesDir, assetName)

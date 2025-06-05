@@ -1,0 +1,11 @@
+org.opencv-core-1.12.0-0 C:\Users\dmy22\.gradle\caches\8.11.1\transforms\0445c89c35de327419f838249da7c8e7\transformed\core-1.12.0\res
+org.opencv-jetified-annotation-experimental-1.3.0-1 C:\Users\dmy22\.gradle\caches\8.11.1\transforms\a6fe87deaa060cd0691b81e5d442832d\transformed\jetified-annotation-experimental-1.3.0\res
+org.opencv-lifecycle-runtime-2.3.1-2 C:\Users\dmy22\.gradle\caches\8.11.1\transforms\d9a7176cca68aaf88d88868d2671969c\transformed\lifecycle-runtime-2.3.1\res
+org.opencv-pngs-3 C:\Users\dmy22\AndroidStudioProjects\ImageReconizer\OpenCV-android-sdk\sdk\java\build\generated\res\pngs\release
+org.opencv-resValues-4 C:\Users\dmy22\AndroidStudioProjects\ImageReconizer\OpenCV-android-sdk\sdk\java\build\generated\res\resValues\release
+org.opencv-mergeReleaseResources-5 C:\Users\dmy22\AndroidStudioProjects\ImageReconizer\OpenCV-android-sdk\sdk\java\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+org.opencv-mergeReleaseResources-6 C:\Users\dmy22\AndroidStudioProjects\ImageReconizer\OpenCV-android-sdk\sdk\java\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+org.opencv-release-7 C:\Users\dmy22\AndroidStudioProjects\ImageReconizer\OpenCV-android-sdk\sdk\java\build\intermediates\merged_res\release\mergeReleaseResources
+org.opencv-java-8 C:\Users\dmy22\AndroidStudioProjects\ImageReconizer\OpenCV-android-sdk\sdk\java\res
+org.opencv-main-9 C:\Users\dmy22\AndroidStudioProjects\ImageReconizer\OpenCV-android-sdk\sdk\java\src\main\res
+org.opencv-release-10 C:\Users\dmy22\AndroidStudioProjects\ImageReconizer\OpenCV-android-sdk\sdk\java\src\release\res

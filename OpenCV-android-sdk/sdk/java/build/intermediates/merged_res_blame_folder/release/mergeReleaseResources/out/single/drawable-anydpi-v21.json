@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "org.opencv-release-6:/drawable-anydpi-v21/ic_call_decline_low.xml",
+        "source": "org.opencv-core-1.12.0-0:/drawable-anydpi-v21/ic_call_decline_low.xml"
+    },
+    {
+        "merged": "org.opencv-release-6:/drawable-anydpi-v21/ic_call_answer_video.xml",
+        "source": "org.opencv-core-1.12.0-0:/drawable-anydpi-v21/ic_call_answer_video.xml"
+    },
+    {
+        "merged": "org.opencv-release-6:/drawable-anydpi-v21/ic_call_answer.xml",
+        "source": "org.opencv-core-1.12.0-0:/drawable-anydpi-v21/ic_call_answer.xml"
+    },
+    {
+        "merged": "org.opencv-release-6:/drawable-anydpi-v21/ic_call_decline.xml",
+        "source": "org.opencv-core-1.12.0-0:/drawable-anydpi-v21/ic_call_decline.xml"
+    },
+    {
+        "merged": "org.opencv-release-6:/drawable-anydpi-v21/ic_call_answer_video_low.xml",
+        "source": "org.opencv-core-1.12.0-0:/drawable-anydpi-v21/ic_call_answer_video_low.xml"
+    },
+    {
+        "merged": "org.opencv-release-6:/drawable-anydpi-v21/ic_call_answer_low.xml",
+        "source": "org.opencv-core-1.12.0-0:/drawable-anydpi-v21/ic_call_answer_low.xml"
+    }
+]

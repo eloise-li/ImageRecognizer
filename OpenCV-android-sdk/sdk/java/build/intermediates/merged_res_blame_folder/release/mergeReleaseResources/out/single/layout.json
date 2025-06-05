@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "org.opencv-release-6:/layout/custom_dialog.xml",
+        "source": "org.opencv-core-1.12.0-0:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "org.opencv-release-6:/layout/ime_base_split_test_activity.xml",
+        "source": "org.opencv-core-1.12.0-0:/layout/ime_base_split_test_activity.xml"
+    },
+    {
+        "merged": "org.opencv-release-6:/layout/notification_template_part_time.xml",
+        "source": "org.opencv-core-1.12.0-0:/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "org.opencv-release-6:/layout/notification_template_part_chronometer.xml",
+        "source": "org.opencv-core-1.12.0-0:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "org.opencv-release-6:/layout/ime_secondary_split_test_activity.xml",
+        "source": "org.opencv-core-1.12.0-0:/layout/ime_secondary_split_test_activity.xml"
+    }
+]

@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\dmy22\AndroidStudioProjects\ImageReconizer\OpenCV-android-sdk\sdk\java"
+    name=":opencv"
+    type="LIBRARY"
+    maven="ImageRecognizer:opencv:unspecified"
+    agpVersion="8.8.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\dmy22\AppData\Local\Android\Sdk\platforms\android-35\android.jar;C:\Users\dmy22\AppData\Local\Android\Sdk\build-tools\35.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-35"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

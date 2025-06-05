@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "org.opencv-release-6:/drawable-v21/notification_action_background.xml",
+        "source": "org.opencv-core-1.12.0-0:/drawable-v21/notification_action_background.xml"
+    }
+]

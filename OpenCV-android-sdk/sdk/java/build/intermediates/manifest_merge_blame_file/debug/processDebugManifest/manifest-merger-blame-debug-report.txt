@@ -1,0 +1,14 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.opencv" >
+4
+5    <uses-sdk android:minSdkVersion="26" />
+6
+7    <uses-permission android:name="android.permission.CAMERA" />
+7-->/Users/youguxuanhe/Desktop/ImageReconizer/OpenCV-android-sdk/sdk/java/AndroidManifest.xml:5:5-65
+7-->/Users/youguxuanhe/Desktop/ImageReconizer/OpenCV-android-sdk/sdk/java/AndroidManifest.xml:5:22-62
+8    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+8-->/Users/youguxuanhe/Desktop/ImageReconizer/OpenCV-android-sdk/sdk/java/AndroidManifest.xml:6:5-71
+8-->/Users/youguxuanhe/Desktop/ImageReconizer/OpenCV-android-sdk/sdk/java/AndroidManifest.xml:6:22-68
+9
+10</manifest>

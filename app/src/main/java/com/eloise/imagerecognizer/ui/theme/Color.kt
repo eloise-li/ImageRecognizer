@@ -1,4 +1,4 @@
-package com.eloise.imagereconizer.ui.theme
+package com.eloise.imagerecognizer.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

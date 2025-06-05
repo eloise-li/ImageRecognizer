@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.8.2" type="conditional_incidents">
+
+    <incident
+        id="InlinedApi"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffe000000" requiresApi="ffffffff00000000"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+            line="63"
+            column="174"
+            startOffset="2961"
+            endLine="63"
+            endColumn="211"
+            endOffset="2998"/>
+        <map>
+            <entry
+                name="message"
+                string="Field requires API level 33 (current min is %1$s): `android.Manifest.permission#READ_MEDIA_IMAGES`"/>
+            <api-levels id="minSdk"
+                value="fffffffffe000000"/>
+            <entry
+                name="name"
+                string="READ_MEDIA_IMAGES"/>
+            <entry
+                name="owner"
+                string="android.Manifest.permission"/>
+            <api-levels id="requiresApi"
+                value="ffffffff00000000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="PermissionImpliesUnsupportedChromeOsHardware"
+        severity="error"
+        message="Permission exists without corresponding hardware `&lt;uses-feature android:name=&quot;android.hardware.camera&quot; required=&quot;false&quot;>` tag">
+        <fix-data featureName="android.hardware.camera"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="5"
+            column="6"
+            startOffset="143"
+            endLine="5"
+            endColumn="21"
+            endOffset="158"/>
+        <map>
+            <condition library="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 21">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/Camera2Renderer.java"
+                startOffset="749"
+                endOffset="763"/>
+        </fix-replace>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/Camera2Renderer.java"
+            line="22"
+            column="1"
+            startOffset="749"
+            endLine="22"
+            endColumn="15"
+            endOffset="763"/>
+        <map>
+            <condition minGE="fffffffffff00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 23">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraActivity.java"
+                startOffset="1534"
+                endOffset="1567"/>
+        </fix-replace>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraActivity.java"
+            line="52"
+            column="5"
+            startOffset="1534"
+            endLine="52"
+            endColumn="38"
+            endOffset="1567"/>
+        <map>
+            <condition minGE="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 15">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraGLRendererBase.java"
+                startOffset="512"
+                endOffset="526"/>
+        </fix-replace>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraGLRendererBase.java"
+            line="20"
+            column="1"
+            startOffset="512"
+            endLine="20"
+            endColumn="15"
+            endOffset="526"/>
+        <map>
+            <condition minGE="ffffffffffffc000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 15">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraRenderer.java"
+                startOffset="238"
+                endOffset="252"/>
+        </fix-replace>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraRenderer.java"
+            line="12"
+            column="1"
+            startOffset="238"
+            endLine="12"
+            endColumn="15"
+            endOffset="252"/>
+        <map>
+            <condition minGE="ffffffffffffc000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 21">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/JavaCamera2View.java"
+                startOffset="1596"
+                endOffset="1610"/>
+        </fix-replace>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/JavaCamera2View.java"
+            line="45"
+            column="1"
+            startOffset="1596"
+            endLine="45"
+            endColumn="15"
+            endOffset="1610"/>
+        <map>
+            <condition minGE="fffffffffff00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 23">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+                startOffset="951"
+                endOffset="984"/>
+        </fix-replace>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+            line="36"
+            column="1"
+            startOffset="951"
+            endLine="36"
+            endColumn="34"
+            endOffset="984"/>
+        <map>
+            <condition minGE="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+</incidents>

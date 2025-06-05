@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.8.2" type="partial_results">
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="android.settings.APP_NOTIFICATION_SETTINGS (used to start an activity)">
+                        <location id="0"
+                            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+                            line="94"
+                            column="3"
+                            startOffset="3752"
+                            endLine="94"
+                            endColumn="65"
+                            endOffset="3814"/>
+                    </map>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="attr[show_fps(D),camera_id(D)],styleable[CameraBridgeViewBase(U),CameraBridgeViewBase_show_fps(R),CameraBridgeViewBase_camera_id(R)];;;;"/>
+    </map>
+    <map id="_ChecksSdkIntAtLeast">
+        <entry
+            name="org.opencv.utils.PermisstionUtil#checkSDK()"
+            string="api=23"/>
+    </map>
+
+</incidents>

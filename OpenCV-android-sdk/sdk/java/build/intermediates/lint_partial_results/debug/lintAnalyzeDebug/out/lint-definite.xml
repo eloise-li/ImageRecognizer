@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.8.2" type="incidents">
+
+    <incident
+        id="AnnotateVersionCheck"
+        severity="warning"
+        message="This method should be annotated with `@ChecksSdkIntAtLeast(api=Build.VERSION_CODES.M)`">
+        <annotate
+            description="Annotate with @ChecksSdkIntAtLeast"
+            source="@androidx.annotation.ChecksSdkIntAtLeast(api=Build.VERSION_CODES.M)"
+            replace="true">
+            <range
+                file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+                startOffset="3204"
+                endOffset="3298"/>
+        </annotate>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+            line="73"
+            column="24"
+            startOffset="3226"
+            endLine="73"
+            endColumn="32"
+            endOffset="3234"/>
+    </incident>
+
+    <incident
+        id="CustomViewStyleable"
+        severity="warning"
+        message="By convention, the custom view (`CameraGLSurfaceView`) and the declare-styleable (`CameraBridgeViewBase`) should have the same name (various editor features rely on this convention)">
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraGLSurfaceView.java"
+            line="48"
+            column="77"
+            startOffset="1948"
+            endLine="48"
+            endColumn="109"
+            endOffset="1980"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraActivity.java"
+            line="40"
+            column="13"
+            startOffset="1140"
+            endLine="40"
+            endColumn="59"
+            endOffset="1186"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraGLSurfaceView.java"
+            line="52"
+            column="12"
+            startOffset="2120"
+            endLine="52"
+            endColumn="50"
+            endOffset="2158"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraRenderer.java"
+            line="49"
+            column="35"
+            startOffset="1351"
+            endLine="49"
+            endColumn="91"
+            endOffset="1407"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/CameraRenderer.java"
+            line="63"
+            column="17"
+            startOffset="2041"
+            endLine="63"
+            endColumn="73"
+            endOffset="2097"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/JavaCameraView.java"
+            line="93"
+            column="21"
+            startOffset="3219"
+            endLine="93"
+            endColumn="77"
+            endOffset="3275"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/JavaCameraView.java"
+            line="168"
+            column="25"
+            startOffset="7538"
+            endLine="168"
+            endColumn="88"
+            endOffset="7601"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/android/JavaCameraView.java"
+            line="217"
+            column="25"
+            startOffset="10128"
+            endLine="217"
+            endColumn="79"
+            endOffset="10182"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+            line="74"
+            column="10"
+            startOffset="3248"
+            endLine="74"
+            endColumn="56"
+            endOffset="3294"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+            line="169"
+            column="7"
+            startOffset="6810"
+            endLine="169"
+            endColumn="34"
+            endOffset="6837"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 23 from outer annotation (`@TargetApi(23)`)">
+        <fix-replace
+            description="Delete @RequiresApi"
+            replacement=""
+            priority="0">
+            <range
+                file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+                startOffset="15734"
+                endOffset="15780"/>
+        </fix-replace>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+            line="463"
+            column="2"
+            startOffset="15734"
+            endLine="463"
+            endColumn="48"
+            endOffset="15780"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; `SDK_INT` is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:opencv*debug*MAIN*sourceProvider*0*javaDir*1}/org/opencv/utils/PermisstionUtil.java"
+            line="467"
+            column="7"
+            startOffset="15853"
+            endLine="467"
+            endColumn="53"
+            endOffset="15899"/>
+    </incident>
+
+</incidents>

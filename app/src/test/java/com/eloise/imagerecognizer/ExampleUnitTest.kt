@@ -1,4 +1,4 @@
-package com.eloise.imagereconizer
+package com.eloise.imagerecognizer
 
 import org.junit.Test
 
